@@ -13,11 +13,13 @@ for x in input:
 increase = 0
 index = 0
 for x in new_list:
+    if index - 1 < 0:
+        pass
     if x > new_list[index - 1]:
         increase += 1
     index += 1
 
-# print(increase)
+print(increase)
 
 # Part 2
 # Consider sums of a three-measurement sliding window. How many sums are larger than the previous sum?
