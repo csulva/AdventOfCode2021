@@ -102,9 +102,9 @@ def c02(list):
     return list
 
 print(oxygen(new_input))
-# Output = 101010101111
+# Output = 101010101111 or 2735
 print(c02(new_input))
-# Output = 010111011101
+# Output = 010111011101 or 1501
 
 oxygen_rate = 2735
 c02_rate = 1501
