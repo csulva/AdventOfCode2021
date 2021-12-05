@@ -109,4 +109,39 @@ test_board = [['22', '13', '17', '11', '0'],
 # # OUTPUT number:7
 # count:20
 # discarded: {'21', '1', '2', '55', '48', '62', '36', '63', '94', '58', '6', '16', '47', '92', '44', '40', '7', '17', '20', '4'}
-check_boards(new_list, board_list)
+# check_boards(new_list, board_list)
+# print(board_list)
+
+table_list = []
+big_table_list = []
+index = 0
+for x in board_list[0]:
+    table_list.append(x)
+    index += 1
+    if index % 5 == 0:
+        big_table_list.append(table_list)
+        table_list = []
+
+table_column_1 = []
+big_table_columns = []
+index = 0
+for x in columns_list:
+    table_column_1.append(x)
+    index += 1
+    if index % 5 == 0:
+        big_table_columns.append(table_column_1)
+        table_column_1 = []
+
+# big table list = horizontal
+def check_last_board(input_list, board_list):
+    row = 0
+    index = 0
+    for x in input_list:
+        for tables in board_list[row]:
+            for num in tables:
+                if x == num:
+                    num.replace(num, 'x')
+        index += 1
+    row += 1
+
+check_last_board(new_list, big_table_list)
